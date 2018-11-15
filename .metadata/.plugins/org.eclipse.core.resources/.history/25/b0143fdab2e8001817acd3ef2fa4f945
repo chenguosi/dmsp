@@ -1,0 +1,25 @@
+server:
+  port: 80
+  
+spring:
+  application:
+    name: dmsp-zuul  
+
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+  instance: 
+    ip-address: true
+    instance-id: dmsp-zuul
+    
+zuul:
+  prefix: /iot
+  ignored-services: "*"
+  routes: 
+    dmspCondition:
+      service-id: dmsp-condition
+      path: /condition/**
+    dmspuser:
+      service-id: dmsp-user
+      path: /user/**

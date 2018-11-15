@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="dmsp-device"/>
+<aop-project name="dmsp-zuul"/>
+<aop-project name="dmsp-condition"/>
+<aop-project name="dmsp-eurekaserver"/>
+<aop-project name="dmsp-user"/>
+</aop-reference-model>

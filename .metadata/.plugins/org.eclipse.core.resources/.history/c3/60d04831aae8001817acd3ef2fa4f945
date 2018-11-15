@@ -1,0 +1,18 @@
+server:
+  port: 7001
+  
+spring:
+  application:
+    name: eurekaservero
+    
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eurekatwo:7002/eureka
+  instance:
+    ip-address: true
+    instance-id: eurekaone
+    
+    

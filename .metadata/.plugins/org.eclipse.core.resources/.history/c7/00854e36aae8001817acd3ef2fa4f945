@@ -1,0 +1,16 @@
+server:
+  port: 8001
+  
+spring:
+  application:
+    name: eurekaserver
+    
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  instance:
+    ip-address: true
+    instance-id: eurekaone
+    
+    
