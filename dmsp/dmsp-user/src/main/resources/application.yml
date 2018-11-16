@@ -4,3 +4,23 @@ server:
 spring:
   application:
     name: dmsp-user
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver   
+    url: jdbc:mysql://localhost:3306/dms?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: xiaofengai
+    connection-timeout: 50000
+    idle-timeout: 180000
+    initial-size: 2
+    max-idle: 5
+    maximum-pool-size: 15
+    max-wait: 18000
+    validation-interval: 18000
+    validationQuery: select 1 from dual
+    
+mybatis: 
+  config-location: classpath:mybatis/mybatis.xml #mybatis配置文件所在路径
+  type-aliases-package: cn.iot.bean  #所有Entity别名类所在包 
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                #所有mapper映射文件
+    
